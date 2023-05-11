@@ -52,7 +52,7 @@
       box-shadow: 0 0 #000;
       transition: box-shadow 0.4s;
     }
-    .card:has(a:hover) {
+    .card:has(a:is(:hover, :focus-visible)) {
       box-shadow: 0.25rem 0.5rem #000;
     }
     .card a:link {
