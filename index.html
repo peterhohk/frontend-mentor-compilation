@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      display: block;
+      object-fit: scale-down;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* RESET ENDS */
+
+    :root {
+      font-size: clamp(12px, 1.5vw, 16px);
+    }
+    body {
+      background-color: #222;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    a:where(:link, :visited) {
+      color: inherit;
+    }
+    a:where(:hover, :focus-visible, :active) {
+      color: cyan;
+    }
+    h1 {
+      margin-block: 1em;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 16rem);
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      display: block;
+      background-color: #444;
+      box-shadow: 0 0 #000;
+      transition: box-shadow 0.4s;
+    }
+    .card:has(a:hover) {
+      box-shadow: 0.25rem 0.5rem #000;
+    }
+    .card a:link {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    .card h2 {
+      margin-block: 0.5em;
+    }
+    .card p {
+      text-align: left;
+    }
+  </style>
+  <title>Frontend Mentor Compilation</title>
+</head>
+
+
+<body>
+
+<h1>Peter Ho's Frontend Mentor Solution Compilation</h1>
+
+<ul class="cards">
+  <li class="card">
+    <a href="./qr-code-component-main/">
+      <img src="./qr-code-component-main/design/desktop-preview.jpg" alt="QR code component preview">
+      <h2>QR code component</h2>
+      <p>A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet.</p>
+    </a>
+  </li>
+</ul>
+
+<p>© 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
+
+</body>
+
+</html>
