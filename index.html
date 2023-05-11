@@ -58,6 +58,7 @@
     }
     .card a {
       display: block;
+      height: 100%;
       padding: 1rem;
       text-decoration: none;
     }
@@ -103,7 +104,6 @@
 <script>
 const url = "./challenges.json";
 const cards = document.getElementsByClassName("cards")[0];
-
 (async function() {
   let cardString = "";
   const res = await fetch(url);
@@ -122,7 +122,6 @@ const cards = document.getElementsByClassName("cards")[0];
   });
   cards.innerHTML = cardString;
 })();
-
 </script>
 
 </body>
