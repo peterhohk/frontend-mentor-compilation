@@ -47,6 +47,7 @@
       padding: 1rem;
     }
     .card {
+      position: relative;
       display: block;
       background-color: #444;
       box-shadow: 0 0 #000;
@@ -55,16 +56,26 @@
     .card:has(a:is(:hover, :focus-visible)) {
       box-shadow: 0.25rem 0.5rem #000;
     }
-    .card a:link {
+    .card a {
       display: block;
       padding: 1rem;
       text-decoration: none;
     }
     .card h2 {
       margin-block: 0.5em;
+      font-size: 1.25rem;
     }
     .card p {
       text-align: left;
+    }
+    .card .wip {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.25rem 0.5rem;
+      background-color: #f00;
+      color: #eee;
+      font-weight: bold;
     }
   </style>
   <title>Peter Ho's Frontend Mentor Solution Compilation</title>
@@ -80,19 +91,39 @@
 
 <main>
   <ul class="cards">
-    <li class="card">
-      <a href="./qr-code-component-main/">
-        <img src="./qr-code-component-main/design/desktop-preview.jpg" alt="QR code component preview">
-        <h2>QR code component</h2>
-        <p>A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet.</p>
-      </a>
-    </li>
+    <!-- cardString goes here -->
+    loading...
   </ul>
 </main>
 
 <footer>
   <p>© 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
 </footer>
+
+<script>
+const url = "./challenges.json";
+const cards = document.getElementsByClassName("cards")[0];
+
+(async function() {
+  let cardString = "";
+  const res = await fetch(url);
+  const challenges = await res.json();
+  challenges.forEach((challenge) => {
+    cardString += `
+      <li class="card">
+        <a href="./${challenge.directory}/">
+          <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
+          <h2>${challenge.name}</h2>
+          <p>${challenge.description}</p>
+          ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
+        </a>
+      </li>
+    `;
+  });
+  cards.innerHTML = cardString;
+})();
+
+</script>
 
 </body>
 
