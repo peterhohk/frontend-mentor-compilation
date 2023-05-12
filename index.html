@@ -41,7 +41,7 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, 16rem);
+      grid-template-columns: repeat(auto-fit, 15rem);
       justify-content: center;
       gap: 1rem;
       padding: 1rem;
@@ -61,14 +61,55 @@
       display: block;
       height: 100%;
       padding: 1rem;
+      color: #eee;
       text-decoration: none;
     }
     .card h2 {
-      margin-block: 0.5em;
+      margin-block: 0.5rem 0.25rem;
       font-size: 1.25rem;
+    }
+    .card li {
+      display: inline-block;
+      margin: 0 0.25em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 2px #000;
+    }
+    .card li.html {
+      color: #6abecd;
+    }
+    .card li.css {
+      color: #849aeb;
+    }
+    .card li.js {
+      color: #cf6390;
+    }
+    .card li.api {
+      color: #aad742;
+    }
+    .card .diff {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 2px #000;
+    }
+    .card .diff.diff-1 {
+      color: #6abecd;
+    }
+    .card .diff.diff-2 {
+      color: #aad742;
+    }
+    .card .diff.diff-3 {
+      color: #f1b604;
+    }
+    .card .diff.diff-4 {
+      color: #f48925;
+    }
+    .card .diff.diff-5 {
+      color: #ed2c49;
     }
     .card p {
       text-align: left;
+      margin-block: 0.25rem 0.5rem;
     }
     .card .wip {
       position: absolute;
@@ -115,6 +156,8 @@ const cards = document.getElementsByClassName("cards")[0];
         <a href="./${challenge.directory}/">
           <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
           <h2>${challenge.name}</h2>
+          <ul>${challenge.tags.map((tag) => `<li class="${tag}">${tag}</li>`).join("")}</ul>
+          <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
           <p>${challenge.description}</p>
           ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
         </a>
