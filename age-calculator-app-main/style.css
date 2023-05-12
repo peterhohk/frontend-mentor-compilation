@@ -1,0 +1,153 @@
+@charset "utf-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+img {
+  display: block;
+  object-fit: scale-down;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+input {
+  font: inherit;
+  color: inherit;
+}
+label {
+  cursor: pointer;
+}
+
+/* RESET ENDS */
+
+@font-face { font-family: Poppins; font-weight: 400; font-style: normal; font-display: swap; src: url(./assets/fonts/Poppins-Regular.ttf); }
+@font-face { font-family: Poppins; font-weight: 400; font-style: italic; font-display: swap; src: url(./assets/fonts/Poppins-Italic.ttf); }
+@font-face { font-family: Poppins; font-weight: 700; font-style: normal; font-display: swap; src: url(./assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: Poppins; font-weight: 700; font-style: italic; font-display: swap; src: url(./assets/fonts/Poppins-BoldItalic.ttf); }
+@font-face { font-family: Poppins; font-weight: 800; font-style: normal; font-display: swap; src: url(./assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: Poppins; font-weight: 800; font-style: italic; font-display: swap; src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf); }
+:root {
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%); /* Why does this one in particular has 1% saturation??? */
+  --off-black: hsl(0, 0%, 8%);
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  --clr-bg: var(--off-white);
+  --clr-app: var(--white);
+  --clr-text: var(--off-black);
+  --clr-input-label: var(--smokey-grey);
+  --clr-input-border: var(--light-grey);
+  --clr-accent: var(--purple);
+  --clr-error: var(--light-red);
+  --fw-extrabold: 800;
+  font-size: clamp(12px, 1.25vw, 16px);
+}
+body {
+  background-color: var(--clr-bg);
+  font-family: Poppins, sans-serif;
+  color: var(--clr-text);
+  line-height: 1.25;
+}
+#app {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 2rem;
+  width: 50rem;
+  max-width: calc(100% - 2rem);
+  border-radius: 1rem 1rem 8rem 1rem;
+  height: fit-content;
+  background-color: var(--clr-app);
+}
+.input-container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+.input-container::after {
+  position: absolute;
+  bottom: -2rem;
+  display: block;
+  content: "";
+  width: 100%;
+  border-top: 2px solid var(--clr-bg);
+  z-index: -1;
+}
+.input-container > div {
+  flex-basis: 10rem;
+}
+.input-container label {
+  display: block;
+  margin-block: 0.5em;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--clr-input-label);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.input-container .error label {
+  color: var(--clr-error);
+}
+.input-container input[type="number"] {
+  padding: 0.5em 0.75em;
+  width: 100%;
+  border: 1px solid var(--clr-input-border);
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-text);
+}
+.input-container .error input[type="number"] {
+  border-color: var(--clr-error);
+}
+.input-container input[type="number"]:focus {
+  border-color: var(--clr-accent);
+}
+.input-container span {
+  display: block;
+  margin-block: 0.5em;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--clr-error);
+}
+#input-submit {
+  display: block;
+  margin-left: auto;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--clr-accent);
+}
+#input-submit:is(:hover, :focus-visible) {
+  background-color: var(--clr-text);
+}
+#output {
+  font-size: 4rem;
+  font-weight: var(--fw-extrabold);
+  font-style: italic;
+}
+.output-number {
+  color: var(--clr-accent);
+}
+@media screen and (max-width: 600px) {
+  #app {
+    margin-top: 6rem;
+  }
+  .input-container::after {
+    bottom: -3rem;
+  }
+  .input-container input[type="number"] {
+    font-size: 1.5rem;
+  }
+  #input-submit {
+    margin-right: auto;
+    margin-block: 1rem;
+  }
+}

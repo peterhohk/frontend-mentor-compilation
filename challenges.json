@@ -1,4 +1,4 @@
 [
   {"completed": true, "name": "QR code component", "directory":"qr-code-component-main", "description": "A perfect first challenge if you're new to HTML and CSS. The card layout doesn't shift, so it's ideal if you haven't learned about building responsive layouts yet."},
-  {"completed": false, "name": "Age calculator app", "directory": "age-calculator-app-main", "description": "This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!"}
+  {"completed": true, "name": "Age calculator app", "directory": "age-calculator-app-main", "description": "This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!"}
 ]
