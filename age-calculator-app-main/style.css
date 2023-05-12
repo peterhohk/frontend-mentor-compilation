@@ -49,18 +49,19 @@ label {
   font-size: clamp(12px, 1.25vw, 16px);
 }
 body {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  margin-inline: 1rem;
   background-color: var(--clr-bg);
   font-family: Poppins, sans-serif;
   color: var(--clr-text);
   line-height: 1.25;
 }
 #app {
-  position: fixed;
-  inset: 0;
-  margin: auto;
   padding: 2rem;
-  width: 50rem;
-  max-width: calc(100% - 2rem);
+  max-width: 50rem;
   border-radius: 1rem 1rem 8rem 1rem;
   height: fit-content;
   background-color: var(--clr-app);
@@ -137,9 +138,6 @@ body {
   color: var(--clr-accent);
 }
 @media screen and (max-width: 600px) {
-  #app {
-    margin-top: 6rem;
-  }
   .input-container::after {
     bottom: -3rem;
   }
