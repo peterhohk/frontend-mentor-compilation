@@ -51,10 +51,11 @@
       display: block;
       background-color: #444;
       box-shadow: 0 0 #000;
-      transition: box-shadow 0.4s;
+      transition: translate 0.4s, box-shadow 0.4s;
     }
     .card:has(a:is(:hover, :focus-visible)) {
-      box-shadow: 0.25rem 0.5rem #000;
+      translate: -0.25rem -0.5rem;
+      box-shadow: 0.5rem 1rem #000;
     }
     .card a {
       display: block;
