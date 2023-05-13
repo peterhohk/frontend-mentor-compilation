@@ -73,7 +73,7 @@ body {
 }
 .input-container::after {
   position: absolute;
-  bottom: -2rem;
+  bottom: -3rem;
   display: block;
   content: "";
   width: 100%;
@@ -100,7 +100,7 @@ body {
   width: 100%;
   border: 1px solid var(--clr-input-border);
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--clr-text);
 }
@@ -119,7 +119,7 @@ body {
 }
 #input-submit {
   display: block;
-  margin-left: auto;
+  margin: 1rem auto;
   width: 4rem;
   height: 4rem;
   padding: 1rem;
@@ -137,15 +137,14 @@ body {
 .output-number {
   color: var(--clr-accent);
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .input-container::after {
-    bottom: -3rem;
+    bottom: -2rem;
   }
   .input-container input[type="number"] {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   #input-submit {
-    margin-right: auto;
-    margin-block: 1rem;
+    margin: 0 0 0 auto;
   }
 }
