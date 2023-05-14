@@ -16,11 +16,16 @@ img {
 /* RESET ENDS */
 
 :root {
+  --black: #000;
+  --off-black: #222;
+  --grey: #444;
+  --white: #eee;
+  --red: #f00;
   font-size: clamp(12px, 1.5vw, 16px);
 }
 body {
-  background-color: #222;
-  color: #eee;
+  background-color: var(--off-black);
+  color: var(--white);
   font-family: Barlow, sans-serif;
   text-align: center;
   line-height: 1.25;
@@ -44,19 +49,19 @@ header {
 .card {
   position: relative;
   display: block;
-  background-color: #444;
-  box-shadow: 0 0 #000;
+  background-color: var(--grey);
+  box-shadow: 0 0 var(--black);
   transition: translate 0.4s, box-shadow 0.4s;
 }
 .card:has(a:is(:hover, :focus-visible)) {
   translate: -0.25rem -0.5rem;
-  box-shadow: 0.5rem 1rem #000;
+  box-shadow: 0.5rem 1rem var(--black);
 }
 .card a {
   display: block;
   height: 100%;
   padding: 1rem;
-  color: #eee;
+  color: var(--white);
   text-decoration: none;
 }
 .card h2 {
@@ -68,7 +73,7 @@ header {
   margin: 0 0.25em;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 2px #000;
+  text-shadow: 0 2px var(--black);
 }
 .card li.html {
   color: #6abecd;
@@ -85,7 +90,7 @@ header {
 .card .diff {
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 2px #000;
+  text-shadow: 0 2px var(--black);
 }
 .card .diff::before {
   display: inline-block;
@@ -93,7 +98,7 @@ header {
   width: 1.25em;
   height: 1.25em;
   border-radius: 25%;
-  color: #444;
+  color: var(--grey);
   text-shadow: none;
 }
 .card .diff.diff-1 {
@@ -140,7 +145,7 @@ header {
   top: 0;
   right: 0;
   padding: 0.25rem 0.5rem;
-  background-color: #f00;
-  color: #eee;
+  background-color: var(--red);
+  color: var(--white);
   font-weight: bold;
 }
