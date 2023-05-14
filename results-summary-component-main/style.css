@@ -103,10 +103,9 @@ h1, h2 {
   height: 10rem;
   border-radius: 50%;
   background: var(--gradient-fade);
-  font-size: 0.75rem;
 }
 .score-value {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: var(--fw-extrabold);
   color: var(--clr-score-text-highlight);
 }
