@@ -30,6 +30,7 @@
       color: #eee;
       font-family: Barlow, sans-serif;
       text-align: center;
+      line-height: 1.25;
     }
     a:where(:link, :visited) {
       color: inherit;
@@ -93,20 +94,49 @@
       text-transform: uppercase;
       text-shadow: 0 2px #000;
     }
+    .card .diff::before {
+      display: inline-block;
+      margin-right: 0.25ch;
+      width: 1.25em;
+      height: 1.25em;
+      border-radius: 25%;
+      color: #444;
+      text-shadow: none;
+    }
     .card .diff.diff-1 {
       color: #6abecd;
+    }
+    .card .diff.diff-1::before {
+      content: "1";
+      background-color: #6abecd;
     }
     .card .diff.diff-2 {
       color: #aad742;
     }
+    .card .diff.diff-2::before {
+      content: "2";
+      background-color: #aad742;
+    }
     .card .diff.diff-3 {
       color: #f1b604;
+    }
+    .card .diff.diff-3::before {
+      content: "3";
+      background-color: #f1b604;
     }
     .card .diff.diff-4 {
       color: #f48925;
     }
+    .card .diff.diff-4::before {
+      content: "4";
+      background-color: #f48925;
+    }
     .card .diff.diff-5 {
       color: #ed2c49;
+    }
+    .card .diff.diff-5::before {
+      content: "5";
+      background-color: #ed2c49;
     }
     .card p {
       text-align: left;
