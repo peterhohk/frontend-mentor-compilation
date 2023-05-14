@@ -56,8 +56,6 @@ button {
   --clr-summary-verbal-text: var(--green-teal);
   --clr-summary-visual-bg: var(--cobalt-blue-alpha);
   --clr-summary-visual-text: var(--cobalt-blue);
-  --clr-summary-score-text: var(--dark-gray-blue);
-  --clr-summary-maxscore-text: var(--light-lavender);
   --clr-button-bg: var(--dark-gray-blue);
   --clr-button-bg-active: var(--gradient-light);
   --clr-button-text: var(--white);
@@ -69,6 +67,7 @@ body {
   place-items: center;
   align-content: start;
   min-height: 100vh;
+  background: var(--clr-page-bg);
   font-family: "Hanken Grotesk", sans-serif;
   line-height: 1.15;
 }
@@ -89,7 +88,7 @@ h1, h2 {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: var(--gradient-light);
+  background: var(--clr-score-bg);
   border-radius: 0 0 2rem 2rem;
   color: var(--clr-score-text);
   text-align: center;
@@ -102,7 +101,7 @@ h1, h2 {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background: var(--gradient-fade);
+  background: var(--clr-score-inset-bg);
 }
 .score-value {
   font-size: 4rem;
@@ -160,10 +159,10 @@ h1, h2 {
 }
 .summary-items li .summary-score {
   float: right;
-  color: var(--clr-summary-score-text);
+  color: var(--clr-card-text-primary);
 }
 .summary-items li .summary-maxscore {
-  color: var(--clr-summary-maxscore-text);
+  color: var(--clr-card-text-secondary);
 }
 button {
   padding: 1em;
