@@ -32,33 +32,11 @@ button {
   --cobalt-blue: hsl(234, 85%, 45%);
   --gradient-light: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   --gradient-fade: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-
   --alpha: 10%;
   --light-red-alpha: hsla(0, 100%, 67%, var(--alpha));
   --orangey-yellow-alpha: hsla(39, 100%, 56%, var(--alpha));
   --green-teal-alpha: hsla(166, 100%, 37%, var(--alpha));
   --cobalt-blue-alpha: hsla(234, 85%, 45%, var(--alpha));
-
-  --clr-page-bg: var(--white);
-  --clr-card-bg: var(--white);
-  --clr-card-text-primary: var(--dark-gray-blue);
-  --clr-card-text-secondary: var(--light-lavender);
-  --clr-card-shadow: var(--pale-blue);
-  --clr-score-bg: var(--gradient-light);
-  --clr-score-text: var(--light-lavender);
-  --clr-score-text-highlight: var(--white);
-  --clr-score-inset-bg: var(--gradient-fade);
-  --clr-summary-reaction-bg: var(--light-red-alpha);
-  --clr-summary-reaction-text: var(--light-red);
-  --clr-summary-memory-bg: var(--orangey-yellow-alpha);
-  --clr-summary-memory-text: var(--orangey-yellow);
-  --clr-summary-verbal-bg: var(--green-teal-alpha);
-  --clr-summary-verbal-text: var(--green-teal);
-  --clr-summary-visual-bg: var(--cobalt-blue-alpha);
-  --clr-summary-visual-text: var(--cobalt-blue);
-  --clr-button-bg: var(--dark-gray-blue);
-  --clr-button-bg-active: var(--gradient-light);
-  --clr-button-text: var(--white);
   --fw-extrabold: 800;
   font-size: 18px;
 }
@@ -67,7 +45,7 @@ body {
   place-items: center;
   align-content: start;
   min-height: 100vh;
-  background: var(--clr-page-bg);
+  background: var(--white);
   font-family: "Hanken Grotesk", sans-serif;
   line-height: 1.15;
 }
@@ -79,18 +57,18 @@ h1, h2 {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: var(--clr-card-bg);
-  color: var(--clr-card-text-primary);
-  box-shadow: 0 1rem 1rem 0.5rem var(--clr-card-shadow);
+  background: var(--white);
+  color: var(--dark-gray-blue);
+  box-shadow: 0 1rem 1rem 0.5rem var(--pale-blue);
 }
 .score {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: var(--clr-score-bg);
+  background: var(--gradient-light);
   border-radius: 0 0 2rem 2rem;
-  color: var(--clr-score-text);
+  color: var(--light-lavender);
   text-align: center;
 }
 .score-inset {
@@ -101,18 +79,18 @@ h1, h2 {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background: var(--clr-score-inset-bg);
+  background: var(--gradient-fade);
 }
 .score-value {
   font-size: 4rem;
   font-weight: var(--fw-extrabold);
-  color: var(--clr-score-text-highlight);
+  color: var(--white);
 }
 .score-desc span {
   display: block;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--clr-score-text-highlight);
+  color: var(--white);
 }
 .score-desc p {
   margin: 0.5rem 1rem 1rem;
@@ -131,20 +109,20 @@ h1, h2 {
   font-weight: bold;
 }
 .summary-items li.reaction {
-  --clr-bg: var(--clr-summary-reaction-bg);
-  --clr-text: var(--clr-summary-reaction-text);
+  --clr-bg: var(--light-red-alpha);
+  --clr-text: var(--light-red);
 }
 .summary-items li.memory {
-  --clr-bg: var(--clr-summary-memory-bg);
-  --clr-text: var(--clr-summary-memory-text);
+  --clr-bg: var(--orangey-yellow-alpha);
+  --clr-text: var(--orangey-yellow);
 }
 .summary-items li.verbal {
-  --clr-bg: var(--clr-summary-verbal-bg);
-  --clr-text: var(--clr-summary-verbal-text);
+  --clr-bg: var(--green-teal-alpha);
+  --clr-text: var(--green-teal);
 }
 .summary-items li.visual {
-  --clr-bg: var(--clr-summary-visual-bg);
-  --clr-text: var(--clr-summary-visual-text);
+  --clr-bg: var(--cobalt-blue-alpha);
+  --clr-text: var(--cobalt-blue);
 }
 .summary-items li {
   padding: 0.75rem;
@@ -159,21 +137,21 @@ h1, h2 {
 }
 .summary-items li .summary-score {
   float: right;
-  color: var(--clr-card-text-primary);
+  color: var(--dark-gray-blue);
 }
 .summary-items li .summary-maxscore {
-  color: var(--clr-card-text-secondary);
+  color: var(--light-lavender);
 }
 button {
   padding: 1em;
   margin-block: 0.5rem;
   border-radius: 1.5em;
-  background: var(--clr-button-bg);
+  background: var(--dark-gray-blue);
   font-weight: bold;
-  color: var(--clr-button-text);
+  color: var(--white);
 }
 button:where(:hover, :focus-visible) {
-  background: var(--clr-button-bg-active);
+  background: var(--gradient-light);
 }
 @media screen and (min-width: 600px) {
   body {

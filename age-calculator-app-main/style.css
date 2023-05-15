@@ -38,14 +38,6 @@ label {
   --off-black: hsl(0, 0%, 8%);
   --purple: hsl(259, 100%, 65%);
   --light-red: hsl(0, 100%, 67%);
-
-  --clr-bg: var(--off-white);
-  --clr-app: var(--white);
-  --clr-text: var(--off-black);
-  --clr-input-label: var(--smokey-grey);
-  --clr-input-border: var(--light-grey);
-  --clr-accent: var(--purple);
-  --clr-error: var(--light-red);
   --fw-extrabold: 800;
   font-size: clamp(12px, 1.25vw, 16px);
 }
@@ -55,9 +47,9 @@ body {
   align-content: center;
   min-height: 100vh;
   margin-inline: 1rem;
-  background-color: var(--clr-bg);
+  background-color: var(--off-white);
   font-family: Poppins, sans-serif;
-  color: var(--clr-text);
+  color: var(--off-black);
   line-height: 1.25;
 }
 #app {
@@ -65,7 +57,7 @@ body {
   max-width: 50rem;
   border-radius: 1rem 1rem 8rem 1rem;
   height: fit-content;
-  background-color: var(--clr-app);
+  background-color: var(--white);
 }
 .input-container {
   position: relative;
@@ -78,7 +70,7 @@ body {
   display: block;
   content: "";
   width: 100%;
-  border-top: 2px solid var(--clr-bg);
+  border-top: 2px solid var(--off-white);
   z-index: -1;
 }
 .input-container > div {
@@ -89,34 +81,34 @@ body {
   margin-block: 0.5em;
   font-size: 0.75rem;
   font-weight: bold;
-  color: var(--clr-input-label);
+  color: var(--smokey-grey);
   text-transform: uppercase;
   letter-spacing: 0.25em;
 }
 .input-container .error label {
-  color: var(--clr-error);
+  color: var(--light-red);
 }
 .input-container input[type="number"] {
   padding: 0.5em 0.75em;
   width: 100%;
-  border: 1px solid var(--clr-input-border);
+  border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--clr-text);
+  color: var(--off-black);
 }
 .input-container .error input[type="number"] {
-  border-color: var(--clr-error);
+  border-color: var(--light-red);
 }
 .input-container input[type="number"]:focus {
-  border-color: var(--clr-accent);
+  border-color: var(--purple);
 }
 .input-container span {
   display: block;
   margin-block: 0.5em;
   font-size: 0.75rem;
   font-style: italic;
-  color: var(--clr-error);
+  color: var(--light-red);
 }
 #input-submit {
   display: block;
@@ -125,10 +117,10 @@ body {
   height: 4rem;
   padding: 1rem;
   border-radius: 50%;
-  background-color: var(--clr-accent);
+  background-color: var(--purple);
 }
 #input-submit:is(:hover, :focus-visible) {
-  background-color: var(--clr-text);
+  background-color: var(--off-black);
 }
 #output {
   font-size: 4rem;
@@ -136,7 +128,7 @@ body {
   font-style: italic;
 }
 .output-number {
-  color: var(--clr-accent);
+  color: var(--purple);
 }
 @media screen and (min-width: 600px) {
   .input-container::after {

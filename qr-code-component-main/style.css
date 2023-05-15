@@ -20,11 +20,6 @@ img {
   --gray: hsl(212, 45%, 89%);
   --blue: hsl(220, 15%, 55%);
   --dark-blue: hsl(218, 44%, 22%);
-
-  --clr-bg: var(--gray);
-  --clr-card: var(--white);
-  --clr-heading: var(--dark-blue);
-  --clr-text: var(--blue);
   font-size: 15px;
 }
 body {
@@ -32,8 +27,8 @@ body {
   place-items: center;
   align-content: center;
   min-height: 100vh;
-  background-color: var(--clr-bg);
-  color: var(--clr-text);
+  background-color: var(--gray);
+  color: var(--blue);
   font-family: Outfit, sans-serif;
 }
 .card {
@@ -41,9 +36,9 @@ body {
   height: fit-content;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: var(--clr-card);
+  background-color: var(--white);
   text-align: center;
-  box-shadow: 0 0.5rem 1.5rem -1rem var(--clr-text);
+  box-shadow: 0 0.5rem 1.5rem -1rem var(--blue);
 }
 .card img {
   border-radius: 0.5rem;
@@ -54,7 +49,7 @@ body {
 .card h1 {
   margin-block: 1em;
   font-size: 1.375rem;
-  color: var(--clr-heading);
+  color: var(--dark-blue);
 }
 .card p {
   margin-bottom: 1em;
