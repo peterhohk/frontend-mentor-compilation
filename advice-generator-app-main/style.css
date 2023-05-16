@@ -1,0 +1,102 @@
+@charset "utf-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+.sr-only {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+/* RESET ENDS */
+
+:root {
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  font-size: 28px;
+}
+body {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  margin-inline: 0.5rem;
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  font-family: Manrope, sans-serif;
+  text-align: center;
+  line-height: 1.35;
+}
+#app {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 17.5rem;
+  background-color: var(--dark-grayish-blue);
+}
+#advice-id {
+  color: var(--neon-green);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+}
+#advice-content::before {
+  content: open-quote;
+}
+#advice-content::after {
+  content: close-quote;
+}
+.divider > img {
+  margin: auto;
+  height: 16px;
+  object-fit: cover;
+}
+#advice-generate {
+  position: absolute;
+  inset: auto 0 -1rem 0;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  transition: box-shadow 0.4s, translate 0.1s;
+}
+#advice-generate:is(:hover, :focus-visible) {
+  box-shadow: 0 0 1rem var(--neon-green);
+}
+#advice-generate:active {
+  translate: 0 0.25rem;
+}
+#advice-generate img {
+  margin: auto;
+}
+
+/* put footer at bottom so it doesn't intersect the button */
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
