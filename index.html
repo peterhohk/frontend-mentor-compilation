@@ -41,9 +41,11 @@ const cards = document.getElementsByClassName("cards")[0];
         <a href="./${challenge.directory}/">
           ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
           <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
-          <h2>${challenge.name}</h2>
-          <ul>${challenge.tags.map((tag) => `<li class="${tag}">${tag}</li>`).join("")}</ul>
-          <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
+          <div>
+            <h2>${challenge.name}</h2>
+            <ul>${challenge.tags.map((tag) => `<li class="${tag}">${tag}</li>`).join("")}</ul>
+            <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
+          </div>
           <p>${challenge.description}</p>
         </a>
       </li>

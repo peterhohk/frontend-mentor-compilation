@@ -21,7 +21,7 @@ img {
   --grey: #444;
   --white: #eee;
   --red: #f00;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: 16px;
 }
 body {
   background-color: var(--off-black);
@@ -41,10 +41,10 @@ header {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 15rem);
+  grid-template-columns: auto;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  margin: 1rem;
 }
 .card {
   position: relative;
@@ -58,14 +58,24 @@ header {
   box-shadow: 0.5rem 1rem var(--black);
 }
 .card a {
-  display: block;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  place-items: center;
+  gap: 0.5rem;
   padding: 1rem;
   color: var(--white);
   text-decoration: none;
 }
+.card .wip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: bold;
+}
 .card h2 {
-  margin-block: 0.5rem 0.25rem;
   font-size: 1.25rem;
 }
 .card li {
@@ -75,18 +85,10 @@ header {
   text-transform: uppercase;
   text-shadow: 0 2px var(--black);
 }
-.card li.html {
-  color: #6abecd;
-}
-.card li.css {
-  color: #849aeb;
-}
-.card li.js {
-  color: #cf6390;
-}
-.card li.api {
-  color: #aad742;
-}
+.card li.html { color: #6abecd; }
+.card li.css { color: #849aeb; }
+.card li.js { color: #cf6390; }
+.card li.api { color: #aad742; }
 .card .diff {
   font-weight: bold;
   text-transform: uppercase;
@@ -101,51 +103,31 @@ header {
   color: var(--grey);
   text-shadow: none;
 }
-.card .diff.diff-1 {
-  color: #6abecd;
-}
-.card .diff.diff-1::before {
-  content: "1";
-  background-color: #6abecd;
-}
-.card .diff.diff-2 {
-  color: #aad742;
-}
-.card .diff.diff-2::before {
-  content: "2";
-  background-color: #aad742;
-}
-.card .diff.diff-3 {
-  color: #f1b604;
-}
-.card .diff.diff-3::before {
-  content: "3";
-  background-color: #f1b604;
-}
-.card .diff.diff-4 {
-  color: #f48925;
-}
-.card .diff.diff-4::before {
-  content: "4";
-  background-color: #f48925;
-}
-.card .diff.diff-5 {
-  color: #ed2c49;
-}
-.card .diff.diff-5::before {
-  content: "5";
-  background-color: #ed2c49;
-}
+.card .diff.diff-1 { color: #6abecd; }
+.card .diff.diff-1::before { content: "1"; background-color: #6abecd; }
+.card .diff.diff-2 { color: #aad742; }
+.card .diff.diff-2::before { content: "2"; background-color: #aad742; }
+.card .diff.diff-3 { color: #f1b604; }
+.card .diff.diff-3::before { content: "3"; background-color: #f1b604; }
+.card .diff.diff-4 { color: #f48925; }
+.card .diff.diff-4::before { content: "4"; background-color: #f48925; }
+.card .diff.diff-5 { color: #ed2c49; }
+.card .diff.diff-5::before { content: "5"; background-color: #ed2c49; }
 .card p {
+  grid-column: 1 / -1;
   text-align: left;
   margin-block: 0.25rem 0.5rem;
 }
-.card .wip {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.25rem 0.5rem;
-  background-color: var(--red);
-  color: var(--white);
-  font-weight: bold;
+@media screen and (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, 15rem);
+  }
+  .card a {
+    grid-template-columns: auto;
+    gap: 0;
+    height: 100%;
+  }
+  .card h2 {
+    margin-block: 0.5rem 0.25rem;
+  }
 }
