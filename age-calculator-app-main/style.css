@@ -44,7 +44,6 @@ label {
 body {
   display: grid;
   place-items: center;
-  align-content: center;
   min-height: 100vh;
   margin-inline: 1rem;
   background-color: var(--off-white);
@@ -140,4 +139,10 @@ body {
   #input-submit {
     margin: 0 0 0 auto;
   }
+}
+
+/* footer */
+.attribution {
+  position: absolute;
+  bottom: 1em;
 }

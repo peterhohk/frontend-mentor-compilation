@@ -39,7 +39,6 @@ button {
 body {
   display: grid;
   place-items: center;
-  align-content: center;
   min-height: 100vh;
   margin-inline: 0.5rem;
   background-color: var(--dark-blue);
@@ -95,8 +94,8 @@ body {
   margin: auto;
 }
 
-/* put footer at bottom so it doesn't intersect the button */
+/* footer */
 .attribution {
   position: absolute;
-  bottom: 0;
+  bottom: 1em;
 }

@@ -25,7 +25,6 @@ img {
 body {
   display: grid;
   place-items: center;
-  align-content: center;
   min-height: 100vh;
   background-color: var(--gray);
   color: var(--blue);
@@ -53,4 +52,10 @@ body {
 }
 .card p {
   margin-bottom: 1em;
+}
+
+/* footer */
+.attribution {
+  position: absolute;
+  bottom: 1em;
 }
