@@ -74,6 +74,7 @@ h1, h2 {
 .score-inset {
   display: grid;
   place-items: center;
+  align-content: center;
   margin: 1rem auto;
   width: 10rem;
   height: 10rem;
