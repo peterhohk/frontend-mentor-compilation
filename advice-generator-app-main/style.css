@@ -96,6 +96,6 @@ body {
 
 /* footer */
 .attribution {
-  position: absolute;
+  position: fixed;
   bottom: 1em;
 }

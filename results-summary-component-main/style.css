@@ -175,6 +175,6 @@ button:where(:hover, :focus-visible) {
 
 /* footer */
 .attribution {
-  position: absolute;
+  position: fixed;
   bottom: 1em;
 }
