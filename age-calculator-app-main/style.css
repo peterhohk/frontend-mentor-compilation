@@ -58,6 +58,9 @@ body {
   height: fit-content;
   background-color: var(--white);
 }
+#input {
+  isolation: isolate;
+}
 .input-container {
   position: relative;
   display: flex;
