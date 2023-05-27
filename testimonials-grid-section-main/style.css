@@ -97,6 +97,9 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 0 2px var(--pfp-border);
 }
+.name {
+  font-size: 1rem;
+}
 .identity {
   font-size: smaller;
   opacity: 0.5;
@@ -123,6 +126,9 @@ body {
       "jonathan jeanette"
       "patrick patrick"
       "kira kira";
+  }
+  .testimonial.decor-quote::after {
+    right: 8rem;
   }
   #daniel {
     grid-area: daniel;
