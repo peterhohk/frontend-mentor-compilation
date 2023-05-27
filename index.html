@@ -43,7 +43,7 @@ const cards = document.getElementsByClassName("cards")[0];
           <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
           <div>
             <h2>${challenge.name}</h2>
-            <ul>${challenge.tags.map((tag) => `<li class="${tag}">${tag}</li>`).join("")}</ul>
+            <ul>${challenge.tags.map((tag) => `<li class="${tag.toLowerCase()}">${tag}</li>`).join("")}</ul>
             <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
           </div>
           <p>${challenge.description}</p>
