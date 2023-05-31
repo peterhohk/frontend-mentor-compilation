@@ -143,9 +143,3 @@ body {
     margin: 0 0 0 auto;
   }
 }
-
-/* footer */
-.attribution {
-  position: fixed;
-  bottom: 1em;
-}

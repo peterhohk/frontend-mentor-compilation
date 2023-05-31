@@ -68,8 +68,8 @@ header {
 }
 .card .wip {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -0.25rem;
+  left: -0.25rem;
   padding: 0.25rem 0.5rem;
   background-color: var(--red);
   color: var(--white);
@@ -115,6 +115,9 @@ header {
 .card p {
   grid-column: 1 / -1;
   text-align: left;
+}
+footer {
+  margin-block: 1em;
 }
 @media screen and (min-width: 600px) {
   .card {

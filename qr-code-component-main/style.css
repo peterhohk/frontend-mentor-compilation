@@ -54,9 +54,3 @@ body {
 .card p {
   margin-bottom: 1em;
 }
-
-/* footer */
-.attribution {
-  position: fixed;
-  bottom: 1em;
-}

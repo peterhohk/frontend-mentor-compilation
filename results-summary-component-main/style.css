@@ -172,9 +172,3 @@ button:where(:hover, :focus-visible) {
     padding: 2rem;
   }
 }
-
-/* footer */
-.attribution {
-  position: fixed;
-  bottom: 1em;
-}

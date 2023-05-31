@@ -93,9 +93,3 @@ body {
 #advice-generate img {
   margin: auto;
 }
-
-/* footer */
-.attribution {
-  position: fixed;
-  bottom: 1em;
-}
