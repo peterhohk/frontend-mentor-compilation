@@ -32,23 +32,20 @@
 const url = "./challenges.json";
 const main = document.querySelector("main");
 (async function() {
-  let cardString = "";
   const res = await fetch(url);
   const challenges = await res.json();
-  challenges.forEach((challenge) => {
-    cardString += `
-      <a href="./${challenge.directory}/" class="card">
-        ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
-        <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
-        <div>
-          <h2>${challenge.name}</h2>
-          <ul>${challenge.tags.map((tag) => `<li class="${tag.toLowerCase()}">${tag}</li>`).join("")}</ul>
-          <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
-        </div>
-        <p>${challenge.description}</p>
-      </a>
-    `;
-  });
+  const cardString = await challenges.reduce((acc, cur) => acc + `
+    <a href="./${cur.directory}/" class="card">
+      ${cur.completed ? `` : `<span class="wip">Work in progress</span>`}
+      <img src="./${cur.directory}/design/desktop-preview.jpg" alt="${cur.name} preview">
+      <div>
+        <h2>${cur.name}</h2>
+        <ul>${cur.tags.map((tag) => `<li class="${tag.toLowerCase()}">${tag}</li>`).join("")}</ul>
+        <span class="diff diff-${cur.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][cur.difficulty-1]}</span>
+      </div>
+      <p>${cur.description}</p>
+    </a>
+    `, "")
   main.innerHTML = cardString;
 })();
 </script>
