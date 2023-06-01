@@ -290,6 +290,7 @@ footer nav {
 footer address {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 9rem;
   margin: 4rem auto 0;
 }
