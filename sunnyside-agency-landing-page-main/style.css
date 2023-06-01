@@ -127,6 +127,9 @@ h1 {
 header nav {
   float: right;
 }
+#mobile-nav-button {
+  float: right;
+}
 #mobile-nav-content {
   position: absolute;
   inset: 6rem 1.5rem auto 1.5rem;

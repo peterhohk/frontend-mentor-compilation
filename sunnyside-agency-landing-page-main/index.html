@@ -22,19 +22,19 @@ Contact
 
 <header>
   <h1><img src="./images/logo.svg" alt="Sunnyside Agency" class="logo"></h1>
-  <nav class="mobile-only">
+  <div class="mobile-only">
     <button type="button" id="mobile-nav-button"
       onclick="document.getElementById('mobile-nav-content').classList.toggle('hidden')"
       >
       <img src="./images/icon-hamburger.svg" alt="Navigation menu">
     </button>
-    <div id="mobile-nav-content" class="hidden">
+    <nav id="mobile-nav-content" class="hidden">
       <a href="javascript:void(0);">About</a>
       <a href="javascript:void(0);">Services</a>
       <a href="javascript:void(0);">Projects</a>
       <a href="javascript:void(0);" class="emphasis">Contact</a>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <nav class="desktop-only">
     <a href="javascript:void(0);">About</a>
     <a href="javascript:void(0);">Services</a>
@@ -49,7 +49,7 @@ Contact
 
 <main>
 
-  <section class="two-panel reverse">
+  <div class="two-panel reverse">
     <picture>
       <source media="(min-width: 600px)" srcset="./images/desktop/image-transform.jpg">
       <img src="./images/mobile/image-transform.jpg" alt="">
@@ -62,9 +62,9 @@ Contact
       </p>
       <a href="javascript:void(0);" class="highlight" style="--hl: var(--yellow);">Learn more</a>
     </article>
-  </section>
+  </div>
 
-  <section class="two-panel">
+  <div class="two-panel">
     <picture>
       <source media="(min-width: 600px)" srcset="./images/desktop/image-stand-out.jpg">
       <img src="./images/mobile/image-stand-out.jpg" alt="">
@@ -76,9 +76,9 @@ Contact
       </p>
       <a href="javascript:void(0);" class="highlight" style="--hl: var(--soft-red);">Learn more</a>
     </article>
-  </section>
+  </div>
 
-  <section class="two-panel">
+  <div class="two-panel">
     <article class="service graphic-design">
       <h2>Graphic design</h2>
       <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
@@ -87,9 +87,9 @@ Contact
       <h2>Photography</h2>
       <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
     </article>
-  </section>
+  </div>
 
-  <section class="testimonials">
+  <div class="testimonials">
     <h2>Client testimonials</h2>
     <article class="testimonial">
       <img src="./images/image-emily.jpg" alt="Emily's profile picture" class="pfp">
@@ -121,9 +121,9 @@ Contact
         <span class="person-identity">Business Owner</span>
       </div>
     </article>
-  </section>
+  </div>
 
-  <section class="four-panel">
+  <div class="four-panel">
     <picture>
       <source media="(min-width: 600px)" srcset="./images/desktop/image-gallery-milkbottles.jpg">
       <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="">
@@ -140,7 +140,7 @@ Contact
       <source media="(min-width: 600px)" srcset="./images/desktop/image-gallery-sugarcubes.jpg">
       <img src="./images/mobile/image-gallery-sugarcubes.jpg" alt="">
     </picture>
-  </section>
+  </div>
 
 </main>
 
