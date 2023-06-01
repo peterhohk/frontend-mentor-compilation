@@ -20,10 +20,8 @@
 </header>
 
 <main>
-  <ul class="cards">
-    <!-- cardString goes here -->
-    loading...
-  </ul>
+  <!-- cardString goes here -->
+  loading...
 </main>
 
 <footer>
@@ -32,28 +30,26 @@
 
 <script>
 const url = "./challenges.json";
-const cards = document.getElementsByClassName("cards")[0];
+const main = document.querySelector("main");
 (async function() {
   let cardString = "";
   const res = await fetch(url);
   const challenges = await res.json();
   challenges.forEach((challenge) => {
     cardString += `
-      <li class="card">
-        <a href="./${challenge.directory}/">
-          ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
-          <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
-          <div>
-            <h2>${challenge.name}</h2>
-            <ul>${challenge.tags.map((tag) => `<li class="${tag.toLowerCase()}">${tag}</li>`).join("")}</ul>
-            <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
-          </div>
-          <p>${challenge.description}</p>
-        </a>
-      </li>
+      <a href="./${challenge.directory}/" class="card">
+        ${challenge.completed ? `` : `<span class="wip">Work in progress</span>`}
+        <img src="./${challenge.directory}/design/desktop-preview.jpg" alt="${challenge.name} preview">
+        <div>
+          <h2>${challenge.name}</h2>
+          <ul>${challenge.tags.map((tag) => `<li class="${tag.toLowerCase()}">${tag}</li>`).join("")}</ul>
+          <span class="diff diff-${challenge.difficulty}">${["newbie", "junior", "intermediate", "advanced", "guru"][challenge.difficulty-1]}</span>
+        </div>
+        <p>${challenge.description}</p>
+      </a>
     `;
   });
-  cards.innerHTML = cardString;
+  main.innerHTML = cardString;
 })();
 </script>
 
