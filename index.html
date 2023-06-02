@@ -34,7 +34,7 @@ const main = document.querySelector("main");
 (async function() {
   const res = await fetch(url);
   const challenges = await res.json();
-  const cardString = await challenges.reduce((acc, cur) => acc + `
+  const cardString = challenges.reverse().reduce((acc, cur) => acc + `
     <a href="./${cur.directory}/" class="card">
       ${cur.completed ? `` : `<span class="wip">Work in progress</span>`}
       <img src="./${cur.directory}/design/desktop-preview.jpg" alt="${cur.name} preview">
