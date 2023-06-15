@@ -4,6 +4,11 @@ Compilation of my solutions to [Frontend Mentor](https://www.frontendmentor.io/)
 
 Link to my Frontend Mentor profile: [Frontend Mentor | Peter Ho's profile](https://www.frontendmentor.io/profile/peterhohk)
 
+## Techs used
+
+- HTML & CSS
+- JavaScript
+
 ## Licensing
 
 [MIT](/LICENSE)
