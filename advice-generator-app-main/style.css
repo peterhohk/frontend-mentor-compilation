@@ -39,7 +39,7 @@ button {
 body {
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  min-height: 100svh;
   margin-inline: 0.5rem;
   background-color: var(--dark-blue);
   color: var(--light-cyan);

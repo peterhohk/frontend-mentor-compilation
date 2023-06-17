@@ -44,7 +44,7 @@ body {
   display: grid;
   place-items: center;
   align-content: start;
-  min-height: 100vh;
+  min-height: 100svh;
   background: var(--white);
   font-family: "Hanken Grotesk", sans-serif;
   line-height: 1.15;
@@ -56,7 +56,6 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
   background: var(--white);
   color: var(--dark-gray-blue);
   box-shadow: 0 1rem 1rem 0.5rem var(--pale-blue);
