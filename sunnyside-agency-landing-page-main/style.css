@@ -24,7 +24,7 @@ a {
 .desktop-only {
   display: none;
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .mobile-only {
     display: none;
   }
@@ -67,7 +67,7 @@ picture, picture > img {
 .highlight:is(:hover, :focus-visible)::after {
   background-color: var(--hl);
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .two-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -303,7 +303,7 @@ footer a:is(:hover, :focus-visible) {
 footer a:is(:hover, :focus-visible) img {
   filter: brightness(0) invert(1);
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   header {
     background-image: url(./images/desktop/image-header.jpg);
     aspect-ratio: 2880 / 1600;

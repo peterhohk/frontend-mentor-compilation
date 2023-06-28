@@ -152,7 +152,7 @@ button {
 button:where(:hover, :focus-visible) {
   background: var(--gradient-light);
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   body {
     align-content: center;
   }

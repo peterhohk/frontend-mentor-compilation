@@ -132,7 +132,7 @@ body {
 .output-number {
   color: var(--purple);
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   .input-container::after {
     bottom: -2rem;
   }
