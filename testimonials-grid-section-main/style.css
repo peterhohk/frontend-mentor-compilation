@@ -38,7 +38,7 @@ img {
 body {
   display: grid;
   place-items: center;
-  min-height: 100svh;
+  min-height: 100dvh;
   margin: 4rem 2rem;
   background-color: var(--light-grayish-blue);
   font-family: "Barlow Semi Condensed", sans-serif;

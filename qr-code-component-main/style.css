@@ -25,7 +25,7 @@ img {
 body {
   display: grid;
   place-items: center;
-  min-height: 100svh;
+  min-height: 100dvh;
   background-color: var(--gray);
   font-family: Outfit, sans-serif;
   color: var(--blue);

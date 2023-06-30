@@ -44,7 +44,7 @@ label {
 body {
   display: grid;
   place-items: center;
-  min-height: 100svh;
+  min-height: 100dvh;
   margin-inline: 1rem;
   background-color: var(--off-white);
   font-family: Poppins, sans-serif;
