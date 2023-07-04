@@ -21,7 +21,6 @@ img {
   --grey: #444;
   --white: #eee;
   --red: #f00;
-  font-size: 16px;
 }
 body {
   background-color: var(--off-black);
@@ -79,7 +78,7 @@ main {
   display: inline-block;
   margin: 0 0.25em;
   font-weight: bold;
-  text-shadow: 0 2px var(--black);
+  text-shadow: 0 0.125rem var(--black);
 }
 .card li.html { color: #6abecd; }
 .card li.css { color: #849aeb; }
@@ -88,7 +87,7 @@ main {
 .card .diff {
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 2px var(--black);
+  text-shadow: 0 0.125rem var(--black);
 }
 .card .diff::before {
   display: inline-block;
@@ -116,7 +115,7 @@ main {
 footer {
   margin-block: 1em;
 }
-@media (min-width: 600px) {
+@media (min-width: 36rem) {
   .card {
     grid-template-columns: auto;
     align-content: start;
